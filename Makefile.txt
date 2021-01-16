@@ -1,0 +1,18 @@
+
+dynCGOL: dynCGOL.o
+	gcc -ansi -Wall -o dynCGOL dynCGOL.o
+
+dynCGOL.o: dynCGOL.c
+	gcc -ansi -Wall -c dynCGOL.c
+
+cgol: cgol.o
+	gcc -ansi -Wall -o cgol cgol.o
+
+cgol.o: cgol.c
+	gcc -ansi -Wall -c cgol.c
+
+all: dynCGOL cgol
+
+
+clean: dynCGOL.c cgol.c
+	rm *.o
